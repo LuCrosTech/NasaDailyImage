@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Nasa Daily Image</string>
+    <string name="action_settings">Settings</string>
+    <string name="test_image_title">Operation IceBridge Turns Five</string>
+    <string name="test_image_date">Thu, 16 Oct 2014 12:00:00 EDT</string>
+    <string name="test_image_description">In May 2014, two new studies concluded that a section of the land-based West Antarctic ice sheet had reached a point of inevitable collapse. Meanwhile, fresh observations from September 2014 showed sea ice around Antarctica had reached its greatest extent since the late 1970s.
+
+To better understand such dynamic and dramatic differences in the region\'s land and sea ice, researchers are travelling south to Antarctica this month for the sixth campaign of NASA\'s Operation IceBridge. The airborne campaign, which also flies each year over Greenland, makes annual surveys of the ice with instrumented research aircraft.
+
+Instruments range from lasers that map the elevation of the ice surface, radars that \"see\" below it, and downward looking cameras to provide a natural-color perspective. The Digital Mapping System (DMS) camera acquired the above photo during the mission\'s first science flight on October 16, 2009. At the time of the image, the DC-8 aircraft was flying at an altitude of 515 meters (1,700 feet) over heavily compacted first-year sea ice along the edge of the Amundsen Sea.
+
+Since that first flight, much has been gleaned from IceBridge data. For example, images from an IceBridge flight in October 2011 revealed a massive crack running about 29 kilometers (18 miles) across the floating tongue of Antarctica\'s Pine Island Glacier. The crack ultimately led to a 725-square-kilometer (280-square-mile) iceberg.
+
+In 2012, IceBridge data was a key part of a new map of Antarctica called Bedmap2. By combining surface elevation, ice thickness, and bedrock topography, Bedmap2 gives a clearer picture of Antarctica from the ice surface down to the land surface. Discoveries have been made in Greenland, too, including the identification of a 740-kilometer-long (460-mile-long) mega canyon below the ice sheet.
+
+Repeated measurements of land and sea ice from aircraft extend the record of observations once made by NASA\'s Ice, Cloud, and Land Elevation Satellite, or ICESat, which stopped functioning in 2009. In addition to extending the ICESat record, IceBridge also sets the stage for ICESat-2, which is scheduled for launch in 2017.
+
+\> NASA\'s Earth Observatory: Operation IceBridge Turns Five
+
+Image Credit: IceBridge DMS L0 Raw Imagery courtesy of the Digital Mapping System (DMS) team/NASA DAAC at the National Snow and Ice Data Center
+Caption: Kathryn Hansen</string>
+
+</resources>
