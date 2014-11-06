@@ -87,7 +87,9 @@ public class MainActivity extends Activity {
 		}
 
 		public void startElement(String url, String localName, String qName, Attributes attributes) throws SAXException {
-			if (localName.endsWith(".jpg")) {
+			if (localName.startsWith("enclose")) {
+				// url = attributes.getValue("url");
+				image = getBitmap(attributes.getValue("url"));
 				inUrl = true;
 			} else {
 				inUrl = false;
@@ -119,9 +121,9 @@ public class MainActivity extends Activity {
 
 		public void characters(char ch[], int start, int length) {
 			String chars = new String(ch).substring(start, start + length);
-			if (inUrl && url == null) {
-				image = getBitmap(chars);
-			}
+//			if (inUrl) {
+//				image = getBitmap(chars);
+//			}
 			if (inTitle && title == null) {
 				title = chars;
 			}
