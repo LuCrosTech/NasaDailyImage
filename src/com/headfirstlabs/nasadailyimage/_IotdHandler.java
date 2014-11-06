@@ -14,10 +14,12 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
+
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Bundle;
 
-public class IotdHandler extends DefaultHandler {
+public class _IotdHandler extends DefaultHandler {
 
 	private String url = "http://www.nasa.gov/rss/image_of_the_day.rss";
 	private boolean inTitle = false;
