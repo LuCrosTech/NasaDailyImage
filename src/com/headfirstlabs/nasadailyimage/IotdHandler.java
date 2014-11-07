@@ -14,16 +14,16 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
-
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.Bundle;
+import android.util.Log;
 
-public class _IotdHandler extends DefaultHandler {
+public class IotdHandler extends DefaultHandler {
 
-	private String url = "http://www.nasa.gov/rss/image_of_the_day.rss";
+	private String rss = "http://www.nasa.gov/rss/image_of_the_day.rss";
 	private boolean inTitle = false;
 	private boolean inUrl = false;
+	private String imageUrl = "";
 	private boolean inDescription = false;
 	private boolean inItem = false;
 	private boolean inDate = false;
@@ -39,7 +39,7 @@ public class _IotdHandler extends DefaultHandler {
 			XMLReader reader = parser.getXMLReader();
 
 			reader.setContentHandler(this);
-			InputStream inputStream = new URL(url).openStream();
+			InputStream inputStream = new URL(rss).openStream();
 			reader.parse(new InputSource(inputStream));
 
 		} catch (Exception e) {
@@ -50,7 +50,8 @@ public class _IotdHandler extends DefaultHandler {
 	private Bitmap getBitmap(String url) {
 
 		try {
-			HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+			HttpURLConnection connection = (HttpURLConnection) new URL(url)
+					.openConnection();
 			connection.setDoInput(true);
 			connection.connect();
 			InputStream input = connection.getInputStream();
@@ -63,12 +64,16 @@ public class _IotdHandler extends DefaultHandler {
 
 	}
 
-	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-
-        if (localName.equals("enclosure")) {
-        	inUrl=true;
-            url = attributes.getValue("url");
-        }  
+	public void startElement(String uri, String localName, String qName,
+			Attributes attributes) throws SAXException {
+		Log.i("tag", "localName " + localName);
+		if (localName.startsWith("enclosure")) {
+			inUrl = true;
+			imageUrl = attributes.getValue("url");
+		} else {
+			inUrl = false;
+		}
+			
 
 		if (localName.startsWith("item")) {
 			inItem = true;
@@ -95,7 +100,9 @@ public class _IotdHandler extends DefaultHandler {
 	public void characters(char ch[], int start, int length) {
 		String chars = new String(ch).substring(start, start + length);
 		if (inUrl) {
-			image = getBitmap(chars);
+			image = getBitmap(imageUrl);
+			
+			Log.i("tag", "image " + imageUrl);
 		}
 		if (inTitle) {
 			title = chars;
