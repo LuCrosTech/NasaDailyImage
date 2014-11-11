@@ -2,16 +2,17 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<LinearLayout 
+<LinearLayout
     android:orientation="vertical"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
 
     <TextView 
         android:id="@+id/imageTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/test_image_title" 
+        android:text="@string/test_image_title"
         android:textStyle="bold|italic"/>
     
     <TextView 
@@ -20,12 +21,12 @@
         android:layout_height="wrap_content"
         android:text="@string/test_image_date" />
 
-    <ImageView 
+    <ImageView
         android:id="@+id/imageDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/test_image" 
-        android:contentDescription="@string/test_image_title"/>
+        android:contentDescription="@string/test_image_title"
+        android:src="@drawable/test_image" />
     
     <TextView 
         android:id="@+id/imageDescription"
